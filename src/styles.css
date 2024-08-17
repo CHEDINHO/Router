@@ -1,0 +1,53 @@
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust this value to control the spacing between cards */
+  justify-content: space-around; /* Distributes space around cards */
+  padding: 16px; /* Optional padding around the container */
+  margin-top: 20px; /* Add margin to push the cards down from the filter */
+}
+
+.movie-card {
+  width: calc(33% - 32px); /* Adjust the width based on the number of cards per row and the gap */
+  box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-card h3 {
+  margin: 0;
+  padding: 16px;
+}
+
+.movie-card a {
+  display: block;
+  padding: 16px;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.movie-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    width: calc(50% - 32px); /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card {
+    width: calc(100% - 32px); /* One card per row on small screens */
+  }
+}
